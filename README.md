@@ -4,11 +4,15 @@ The gem contains a lookup ('8.8.8.8') method that takes an IP address and return
 
 The metadata contains the following fields:
 
-city - city
-country - country
-country_code - country code
-lat - width
-lon - longitude 
+    city - city
+
+    country - country
+
+    country_code - country code
+
+    lat - width
+
+    lon - longitude 
 
 ## Installation
 
@@ -28,12 +32,17 @@ Or install it yourself as:
 
 ## Usage
 
-ip_meta = Ipgeobase.lookup('8.8.8.8')
-ip_meta.city # Ashburn
-ip_meta.country # United States
-ip_meta.country_code # US
-ip.lat # 39.03
-ip.lon # -77.5
+    ip_meta = Ipgeobase.lookup('8.8.8.8')
+
+    ip_meta.city # Ashburn
+
+    ip_meta.country # United States
+
+    ip_meta.country_code # US
+
+    ip.lat # 39.03
+
+    ip.lon # -77.5
 
 ## Development
 
