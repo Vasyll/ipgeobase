@@ -6,6 +6,7 @@ require "net/http"
 require "addressable/uri"
 require "happymapper"
 
+# The gem contains a lookup ('8.8.8.8') method that takes an IP address and returns a metadata object.
 module Ipgeobase
   class Error < StandardError; end
 

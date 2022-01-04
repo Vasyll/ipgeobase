@@ -13,7 +13,7 @@ class IpgeobaseTest < Minitest::Test
   end
 
   def test_it_does_something_useful
-    ip_meta = Ipgeobase::lookup("8.8.8.8")
+    ip_meta = Ipgeobase.lookup("8.8.8.8")
     assert_equal "Ashburn", ip_meta.city
     assert_equal "United States", ip_meta.country
     assert_equal "US", ip_meta.countryCode
