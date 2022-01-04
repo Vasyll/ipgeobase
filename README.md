@@ -1,3 +1,5 @@
+![CI status](https://github.com/Vasyll/ipgeobase/actions/workflows/ruby.yml/badge.svg)
+
 # Ipgeobase
 
 The gem contains a lookup ('8.8.8.8') method that takes an IP address and returns a metadata object.
