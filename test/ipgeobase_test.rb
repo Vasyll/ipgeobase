@@ -16,7 +16,7 @@ class IpgeobaseTest < Minitest::Test
     ip_meta = Ipgeobase::lookup("8.8.8.8")
     assert_equal "Ashburn", ip_meta.city
     assert_equal "United States", ip_meta.country
-    assert_equal "US", ip_meta.country_code
+    assert_equal "US", ip_meta.countryCode
     assert_equal "39.03", ip_meta.lat
     assert_equal "-77.5", ip_meta.lon
   end

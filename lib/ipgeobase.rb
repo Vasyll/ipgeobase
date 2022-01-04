@@ -12,7 +12,7 @@ module Ipgeobase
   def self.lookup(ip)
     uri = Addressable::URI.parse("http://ip-api.com/xml/#{ip}")
     xmlfile = Net::HTTP.get(uri)
-    HappyMapper.parse(xmlfile)
+    IpMetadata.parse(xmlfile)
   end
 
   class IpMetadata
@@ -21,7 +21,7 @@ module Ipgeobase
     tag "query"
     element :city, String, tag: "city"
     element :country, String, tag: "country"
-    element :country_code, String, tag: "countryCode"
+    element :countryCode, String, tag: "countryCode"
     element :lat, String, tag: "lat"
     element :lon, String, tag: "lon"
   end
