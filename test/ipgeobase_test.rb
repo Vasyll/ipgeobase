@@ -5,7 +5,7 @@ require_relative "test_helper"
 class IpgeobaseTest < Minitest::Test
   def setup
     raw_response_file = File.new("test/xmlfile.xml")
-    stub_request(:get, "http://ip-api.com/xml/8.8.8.8").to_return(raw_response_file)
+    stub_request(:get, "http://ip-api.com/xml/8.8.8.8").and_return(status: 200, body: raw_response_file)
   end
 
   def test_that_it_has_a_version_number

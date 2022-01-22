@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require_relative "ipgeobase/version"
+require_relative "ipmetadata"
 
 require "net/http"
 require "addressable/uri"
-require "happymapper"
 
 # The gem contains a lookup ('8.8.8.8') method that takes an IP address and returns a metadata object.
 module Ipgeobase
@@ -14,16 +14,5 @@ module Ipgeobase
     uri = Addressable::URI.parse("http://ip-api.com/xml/#{ip}")
     xmlfile = Net::HTTP.get(uri)
     IpMetadata.parse(xmlfile)
-  end
-
-  class IpMetadata
-    include HappyMapper
-
-    tag "query"
-    element :city, String, tag: "city"
-    element :country, String, tag: "country"
-    element :countryCode, String, tag: "countryCode"
-    element :lat, String, tag: "lat"
-    element :lon, String, tag: "lon"
   end
 end
